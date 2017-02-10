@@ -1,0 +1,8 @@
+thead {
+    color: #237AB7;
+}
+.th-center {
+    display: block;
+    margin:auto;
+    max-width: 40%
+}

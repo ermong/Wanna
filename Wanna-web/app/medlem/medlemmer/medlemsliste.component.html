@@ -1,0 +1,44 @@
+    <div class='panel-body'>
+        <div class='row'>
+            <div class='col-md-2'>Filtrer med:</div>
+            <div class='col-md-4'>
+                <input type="text" [(ngModel)]='filter'/>
+                &nbsp;
+                <button class='btn btn-xs btn-primary' (click)='setFilter()'>Tøm filter</button>
+            </div>
+        </div>
+        <div class='row' style="padding-top:10px">
+            <div class='col-md-2'>
+                <button class='btn btn-xs btn-info' (click)='toggleVisLogo()'>
+                    {{!visLogoer ? 'Vis' : "Skjul"}} logoer
+                </button>
+            </div>
+        </div>
+    </div>
+    <div class='table-responsive'>
+        <table class='table' *ngIf='medlemmer && medlemmer.length'>
+            <thead>
+                <tr>
+                    <th>
+                    </th>
+                    <th><button type='button' class='btn btn-link' (click)='toggleAscDesc()'>Medlem </button>
+                    <img width="20px" src="{{'resources/img/arrow_' + retning + '.png'}}" (click)='toggleAscDesc()'/></th>
+                    <th>Kategori</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor='#medlem of medlemmer | medlemsFilter:filter | medlemsSorting:retning'>
+                    <td>
+                        <b2b-logo *ngIf='visLogoer && medlem.logoUrl'
+                            [logoUrl]='medlem.logoUrl' 
+                            [title]='medlem.navn'>
+                        </b2b-logo>
+                    </td>
+                    <td>{{medlem.navn}}</td>
+                    <td><button class='btn btn-xs btn-distribuert' 
+                        *ngFor='#kategori of medlem.kategorier'
+                        (click)='setFilter(kategori.navn)'>{{kategori.navn}}</button></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>

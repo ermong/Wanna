@@ -1,0 +1,35 @@
+[
+    {
+        "medlemId": 1,
+        "navn": "Idrettspartner",
+        "logoUrl": "http://cdn1.casinotopplisten.com/wp-content/uploads/2013/02/Norsk-Tipping.jpg",
+        "kategorier": null
+    },
+    {
+        "medlemId": 2,
+        "navn": "Knowit Sør AS",
+        "logoUrl": "http://www.knowit.no/globalassets/system/icons-and-logotypes/knowit-logotypes/knowit-logo-b.png/Large50",
+        "kategorier": [
+            {"kategori_id":1, "navn": "Konsulent"},
+            {"kategori_id":2, "navn": "Webutvikling"}
+        ]
+    },
+    {
+        "medlemId": 3,
+        "navn": "Norengros Gustav Pedersen",
+        "logoUrl": null,
+        "kategorier": [
+            {"kategori_id":3, "navn": "Detaljhandel"},
+            {"kategori_id":4, "navn": "Rekvisita"},
+            {"kategori_id":5, "navn": "Kontormøbler"}
+        ]
+    },
+    {
+        "medlemId": 4,
+        "navn": "Sparebanken Sør",
+        "logoUrl": "https://www.sor.no/Static/images/logo_liggende.png",
+        "kategorier": [
+            {"kategori_id":6, "navn": "Bank"}
+        ]
+    }
+]
